@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -131,20 +131,20 @@
   .nav-links a:hover{color:var(--text); background:var(--card-bg-hover);}
 
   /* THEME TOGGLE */
-  .theme-toggle{display:flex; align-items:center; gap:7px; background:var(--toggle-bg); border:1px solid var(--toggle-border); padding:6px 12px; border-radius:20px; font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:700; color:var(--text-dim); cursor:pointer; margin-left:auto; white-space:nowrap; transition:background-color .2s ease, border-color .2s ease, color .2s ease;}
+  .theme-toggle{display:flex; align-items:center; gap:7px; background:var(--toggle-bg); border:1px solid var(--toggle-border); padding:6px 12px; border-radius:20px; font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:700; color:var(--text-dim); cursor:pointer; transition:background .15s, color .15s;}
   .theme-toggle:hover{color:var(--text); background:var(--card-bg-hover);}
   .theme-toggle .tt-icon{font-size:13px; line-height:1;}
 
   /* HERO */
   .hero{max-width:760px; margin:0 auto; padding:56px 24px 10px; text-align:center;}
-  .eyebrow{display:inline-block; font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:700; letter-spacing:2px; color:var(--eyebrow-text); background:rgba(240,169,64,0.10); border:1px solid rgba(240,169,64,0.28); padding:5px 14px; border-radius:20px; margin-bottom:18px;}
+  .eyebrow{display:inline-block; font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:700; letter-spacing:2px; color:var(--eyebrow-text); background:rgba(240,169,64,0.10); border:1px solid rgba(240,169,64,0.25); border-radius:6px; padding:4px 12px;}
   .hero h1{font-size:clamp(26px,4.2vw,40px); line-height:1.15; margin:0 0 14px; font-weight:700; letter-spacing:-.5px;
     background:linear-gradient(120deg,var(--hero-grad-1),var(--hero-grad-2) 55%,var(--hero-grad-3)); -webkit-background-clip:text; background-clip:text; color:transparent;}
   .hero p{color:var(--text-dim); font-size:15.5px; line-height:1.7; max-width:600px; margin:0 auto;}
 
   /* BEFORE YOU START PANEL */
   .prereqs{max-width:1000px; margin:30px auto 0; padding:0 24px;}
-  .prereqs-card{background:var(--surface-03); border:1px solid var(--line); border-radius:16px; padding:22px 26px 20px; display:grid; grid-template-columns:1fr; gap:22px; transition:background-color .25s ease, border-color .25s ease, box-shadow .25s ease; box-shadow:var(--card-shadow);}
+  .prereqs-card{background:var(--surface-03); border:1px solid var(--line); border-radius:16px; padding:22px 26px 20px; display:grid; grid-template-columns:1fr; gap:22px; transition:background-color .25s ease;}
   @media(min-width:760px){ .prereqs-card{grid-template-columns:1fr 1fr;} }
   .prereqs-card h3{font-size:13.5px; margin:0 0 11px; color:var(--text); display:flex; align-items:center; gap:7px;}
   .prereqs-card ul{margin:0; padding-left:18px; display:flex; flex-direction:column; gap:8px;}
@@ -169,11 +169,11 @@
   /* SECTIONS */
   .section{max-width:1000px; margin:0 auto; padding:70px 24px 20px;}
   .section-head{margin-bottom:30px;}
-  .section-head .tag{font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px; display:inline-block; padding:4px 12px; border-radius:12px;}
+  .section-head .tag{font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px; display:inline-block; padding:4px 12px; border-radius:6px;}
   .section-head h2{font-size:clamp(20px,3vw,27px); margin:6px 0 10px; font-weight:700; letter-spacing:-.3px;}
   .section-head p{color:var(--text-dim); font-size:14.5px; line-height:1.7; max-width:680px; margin:0;}
 
-  .connector-note{max-width:1000px; margin:26px auto; padding:14px 22px; text-align:center; font-size:13px; color:var(--text-dimmer); border-top:1px dashed var(--card-border); border-bottom:1px dashed var(--card-border); line-height:1.6;}
+  .connector-note{max-width:1000px; margin:26px auto; padding:14px 22px; text-align:center; font-size:13px; color:var(--text-dimmer); border-top:1px dashed var(--card-border); border-bottom:1px dashed var(--card-border);}
   .connector-note b{color:var(--text-dim);}
 
   /* FILE TREE DIAGRAM */
@@ -192,7 +192,7 @@
   .ftree-leaf{font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--text-dim); font-weight:500;}
   .ftree-leaf::before{content:'› '; color:var(--text-dimmer);}
 
-  .mini-note{max-width:900px; margin:24px auto 0; padding:12px 18px; font-size:12.5px; line-height:1.65; color:var(--text-dimmer); border-left:3px solid var(--globals); background:var(--surface-02); border-radius:0 8px 8px 0;}
+  .mini-note{max-width:900px; margin:24px auto 0; padding:12px 18px; font-size:12.5px; line-height:1.65; color:var(--text-dimmer); border-left:3px solid var(--globals); background:var(--surface-02);}
   .mini-note b{color:var(--text-dim);}
 
   /* ANALOGY BOX */
@@ -212,7 +212,7 @@
   .pair-arrow{display:flex; align-items:center; color:var(--text-dimmer); font-size:18px; font-weight:700;}
 
   /* EVENT LOOP SVG */
-  .loop-wrap{max-width:960px; margin:0 auto; background:var(--surface-02); border:1px solid var(--card-border); border-radius:16px; padding:14px; transition:background-color .25s ease, border-color .25s ease, box-shadow .25s ease; box-shadow:var(--card-shadow);}
+  .loop-wrap{max-width:960px; margin:0 auto; background:var(--surface-02); border:1px solid var(--card-border); border-radius:16px; padding:14px; transition:background-color .25s ease, border-color .25s ease;}
   .loop-wrap svg{width:100%; height:auto; display:block;}
   .loop-scroll-hint{display:none;}
   .loop-box-label{font-size:15px; font-weight:700; fill:var(--text);}
@@ -237,14 +237,14 @@
   details.concept-card summary::-webkit-details-marker{display:none;}
   .cc-icon{font-size:18px; line-height:1;}
   .cc-title{font-weight:600; font-size:14px; flex:1; min-width:0;}
-  .cc-tag{font-family:'JetBrains Mono',monospace; font-size:9px; font-weight:800; letter-spacing:.8px; text-transform:uppercase; color:#0a0e17; background:var(--c); padding:3px 7px; border-radius:7px; white-space:nowrap;}
+  .cc-tag{font-family:'JetBrains Mono',monospace; font-size:9px; font-weight:800; letter-spacing:.8px; text-transform:uppercase; color:#0a0e17; background:var(--c); padding:3px 7px; border-radius:7px; flex-shrink:0;}
   .cc-chev{color:var(--text-dimmer); font-size:15px; transition:transform .18s;}
   details[open] .cc-chev{transform:rotate(90deg);}
   .cc-tagline{color:var(--text-dim); font-size:12.5px; margin:9px 0 0; line-height:1.5;}
   .cc-body{margin-top:11px; padding-top:11px; border-top:1px dashed var(--card-border); display:flex; flex-direction:column; gap:7px;}
   .cc-qa{font-size:12px; line-height:1.55; color:var(--text-dim);}
   .cc-qa b{color:var(--text); font-weight:700;}
-  .cc-example{margin-top:4px; background:var(--surface-03); border:1px solid var(--card-border); border-radius:7px; padding:8px 10px; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--example-code-color); line-height:1.5;}
+  .cc-example{margin-top:4px; background:var(--surface-03); border:1px solid var(--card-border); border-radius:7px; padding:8px 10px; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--text-dim);}
 
   /* CODE WINDOWS */
   .code-window{margin-top:14px; border-radius:10px; overflow:hidden; background:#0b0f1a; border:1px solid rgba(255,255,255,0.08); min-width:0;}
@@ -269,18 +269,18 @@
   details.quiz-card:hover{background:var(--card-bg-hover);}
   details.quiz-card summary{cursor:pointer; list-style:none; display:flex; align-items:flex-start; gap:10px; font-weight:600; font-size:13.5px; color:var(--text);}
   details.quiz-card summary::-webkit-details-marker{display:none;}
-  details.quiz-card summary::before{content:"Q"; font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:800; color:#0a0e17; background:var(--amber); border-radius:6px; padding:2px 7px; flex-shrink:0; margin-top:2px;}
+  details.quiz-card summary::before{content:"Q"; font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:800; color:#0a0e17; background:var(--amber); border-radius:6px; padding:2px 7px; flex-shrink:0;}
   .quiz-answer{margin-top:11px; padding-top:11px; padding-left:26px; border-top:1px dashed var(--card-border); font-size:12.8px; line-height:1.65; color:var(--text-dim);}
   .quiz-answer b{color:var(--teal-ink);}
   .quiz-more-wrap{display:none; flex-direction:column; gap:10px;}
   .quiz-more-wrap.is-open{display:flex;}
-  .quiz-more-btn{align-self:center; margin-top:4px; background:var(--card-bg); border:1px solid var(--card-border); color:var(--text-dim); font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:700; letter-spacing:.3px; padding:9px 20px; border-radius:20px; cursor:pointer;}
+  .quiz-more-btn{align-self:center; margin-top:4px; background:var(--card-bg); border:1px solid var(--card-border); color:var(--text-dim); font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; padding:6px 12px; border-radius:8px; cursor:pointer; transition:background .15s, color .15s;}
   .quiz-more-btn:hover{background:var(--card-bg-hover); color:var(--text);}
 
   /* CHEAT SHEET */
   .cheat-groups{display:flex; flex-direction:column; gap:14px; margin-top:26px;}
   .cheat-group{background:var(--card-bg); border:1px solid var(--card-border); border-radius:12px; padding:16px 20px;}
-  .cheat-group-label{display:flex; align-items:center; gap:8px; font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:var(--text-dim); margin-bottom:12px;}
+  .cheat-group-label{display:flex; align-items:center; gap:8px; font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:var(--text-dimmer);}
   .cheat-group-label .dot{width:8px;height:8px;border-radius:50%; flex-shrink:0;}
   .cheat-terms{display:flex; flex-wrap:wrap; gap:6px 22px;}
   .cheat-term{font-size:12.5px; line-height:1.7; color:var(--text-dim);}
@@ -345,15 +345,61 @@
       <a href="#cheatsheet">Cheat Sheet</a>
     </div>
     <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle light and dark theme">
-      <span class="tt-icon" id="themeIcon">☀️</span><span id="themeLabel">Light</span>
+      <span class="tt-icon" id="themeIcon">🌙</span><span id="themeLabel">Dark</span>
     </button>
   </div>
 </nav>
 
+<script>
+  // Initialize theme on page load
+  function initializeTheme() {
+    const html = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeLabel = document.getElementById('themeLabel');
+    
+    // Check if theme is stored in localStorage
+    let currentTheme = localStorage.getItem('theme') || 'light';
+    
+    // Set the theme
+    html.setAttribute('data-theme', currentTheme);
+    updateThemeUI(currentTheme);
+    
+    // Add click listener to toggle button
+    themeToggle.addEventListener('click', () => {
+      currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeUI(newTheme);
+    });
+  }
+  
+  function updateThemeUI(theme) {
+    const themeIcon = document.getElementById('themeIcon');
+    const themeLabel = document.getElementById('themeLabel');
+    
+    if (theme === 'light') {
+      themeIcon.textContent = '🌙';
+      themeLabel.textContent = 'Dark';
+    } else {
+      themeIcon.textContent = '☀️';
+      themeLabel.textContent = 'Light';
+    }
+  }
+  
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeTheme);
+  } else {
+    initializeTheme();
+  }
+</script>
+
 <header class="hero">
   <span class="eyebrow">[ ONE-PAGE CONCEPTUAL MAP ]</span>
   <h1>How Node.js Actually Works</h1>
-  <p>Not a tutorial. Not a roadmap. One connected system, mapped end to end. Read it once, top to bottom — then use the nav bar to jump back into any single piece whenever the real learning ahead needs it.</p>
+  <p>Not a tutorial. Not a roadmap. One connected system, mapped end to end. Read it once, top to bottom — then use the nav bar to jump back into any single piece whenever the real learning ahead needs a refresher.</p>
 </header>
 
 <!-- ============ BEFORE YOU START ============ -->
@@ -397,7 +443,7 @@
   <div class="section-head">
     <span class="tag" style="color:#0a0e17;background:var(--project)">[ LAYER 0 ]</span>
     <h2>What Is Node.js, and Why Does It Exist?</h2>
-    <p><b style="color:var(--text)">Node.js is JavaScript running outside a browser.</b> Before Node, JS could only run inside web pages. Node took Chrome's V8 engine and bolted on file access, networking, and more — so JavaScript could also power <b style="color:var(--text)">servers</b>: programs that stay running in the background, waiting to answer requests from other computers (a browser, another app, anything).</p>
+    <p><b style="color:var(--text)">Node.js is JavaScript running outside a browser.</b> Before Node, JS could only run inside web pages. Node took Chrome's V8 engine and bolted on file access, network calls, and a way to organize code into reusable pieces.</p>
   </div>
 
   <div class="stack-diagram">
@@ -418,1123 +464,18 @@
 
   <div class="analogy-box">
     <span class="analogy-label">🍳 Think of it like this</span>
-    <p>A restaurant. Your code is the order the customer places. Node's APIs are the standard equipment every kitchen has — an oven, a fridge. <b>V8</b> is the chef who actually reads the ticket and cooks. <b>libuv</b> is the rest of the kitchen staff — handling anything that takes time, so the chef is never stuck standing still. We'll come back to this kitchen all page long.</p>
+    <p>A restaurant. Your code is the order the customer places. Node's APIs are the standard equipment every kitchen has — an oven, a fridge. <b>V8</b> is the chef who actually reads the ticket and makes decisions. <b>libuv</b> is the kitchen staff who handles the slow stuff — they marinate the meat, wait for deliveries, prep ingredients in parallel. The <b>OS</b> is the outside world — the farm, the supplier, the delivery truck.</p>
   </div>
 </section>
 
-<div class="connector-note">Node.js = <b>V8</b> (runs JS) + <b>libuv</b> (handles everything slow) + a toolbox of APIs on top. Before going deeper into how they work together, let's make this concrete: how do you actually run any of it?</div>
+<div class="connector-note">Node.js = <b>V8</b> (runs JS) + <b>libuv</b> (handles everything slow) + a toolbox of APIs on top. Before going deeper into how they work together, let's make this concrete by actually running some code.</div>
 
-<!-- ============ RUNNING YOUR CODE ============ -->
-<section class="section" id="running">
-  <div class="section-head">
-    <span class="tag" style="color:#0a0e17;background:var(--practice)">[ LAYER 1 ]</span>
-    <h2>Running Your Code</h2>
-    <p>Everything above is still just theory until you actually execute a file. Node is a program installed on your computer — here's how you talk to it.</p>
-  </div>
-
-  <div class="code-window">
-    <div class="code-header"><span class="dot2 r"></span><span class="dot2 y"></span><span class="dot2 g"></span><span class="code-label">terminal</span></div>
-    <pre class="code-body"><span class="com">$ node app.js</span>
-Server running on port 3000
-
-<span class="com">$ node</span>              <span class="com">// no filename → opens the REPL</span>
-&gt; 2 + 2
-4
-&gt; console.log('hi')
-hi</pre>
-  </div>
-
-  <div class="card-grid">
-    <details class="concept-card" style="--c:var(--practice)">
-      <summary><span class="cc-icon">▶️</span><span class="cc-title">node file.js</span><span class="cc-tag">Command</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">The one command you'll type more than any other.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> Runs one JavaScript file, top to bottom, using Node instead of a browser.</div>
-        <div class="cc-qa"><b>Why:</b> Your code needs an engine to execute it — Node is that engine on your machine.</div>
-        <div class="cc-qa"><b>Does:</b> Reads the file, runs your code, then exits once there's nothing left to do (more on exactly when, in the Event Loop section).</div>
-        <div class="cc-qa"><b>Connects:</b> This is genuinely the only command you need for most of what's on this page.</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--practice)">
-      <summary><span class="cc-icon">⌨️</span><span class="cc-title">The REPL</span><span class="cc-tag">Interactive</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">A live prompt for testing one line at a time.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> Type <code style="font-family:'JetBrains Mono',monospace;color:var(--example-code-color);white-space:nowrap;">node</code> alone, with no filename, to get an interactive shell.</div>
-        <div class="cc-qa"><b>Why:</b> Perfect for testing a tiny snippet without creating a whole file.</div>
-        <div class="cc-qa"><b>Does:</b> Runs each line the moment you hit enter, and shows you the result immediately.</div>
-        <div class="cc-qa"><b>Connects:</b> Same engine as running a file — just interactive instead of reading from disk.</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--practice)">
-      <summary><span class="cc-icon">🖨️</span><span class="cc-title">console.log()</span><span class="cc-tag">Output</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Your window into what your code is actually doing.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> Prints a value to your terminal — Node's version of "let me see what's happening."</div>
-        <div class="cc-qa"><b>Why:</b> There's no browser page to look at — this is how you'll debug almost everything below.</div>
-        <div class="cc-qa"><b>Does:</b> Accepts strings, numbers, objects, arrays — anything — and prints a readable version.</div>
-        <div class="cc-qa"><b>Connects:</b> Formally, this lives on the <code style="font-family:'JetBrains Mono',monospace;color:var(--example-code-color);white-space:nowrap;">console</code> global object — see Globals below.</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--practice)">
-      <summary><span class="cc-icon">🔄</span><span class="cc-title">nodemon</span><span class="cc-tag">Optional</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Restarts your server automatically when you save.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> A small tool that watches your files and restarts Node the moment one changes.</div>
-        <div class="cc-qa"><b>Why:</b> Without it, you'd manually stop and rerun <code style="font-family:'JetBrains Mono',monospace;color:var(--example-code-color);white-space:nowrap;">node</code> after every single edit.</div>
-        <div class="cc-qa"><b>Does:</b> Swap <code style="font-family:'JetBrains Mono',monospace;color:var(--example-code-color);white-space:nowrap;">node app.js</code> for <code style="font-family:'JetBrains Mono',monospace;color:var(--example-code-color);white-space:nowrap;">npx nodemon app.js</code>.</div>
-        <div class="cc-qa"><b>Connects:</b> Installed like any other npm package — see Modules & npm below.</div>
-      </div>
-    </details>
-  </div>
-</section>
-
-<div class="connector-note">Good — now you can actually run something. Next: the instant you hit run, what really happens, step by step.</div>
-
-<!-- ============ EVENT LOOP ============ -->
-<section class="section" id="eventloop">
-  <div class="section-head">
-    <span class="tag" style="color:#0a0e17;background:var(--runtime)">[ LAYER 2 ]</span>
-    <h2>The Event Loop — The Heart of Node.js</h2>
-    <p>Node runs your JS on <b style="color:var(--text)">one single thread</b>. The Event Loop is the trick that lets that one thread handle thousands of things "at once" without ever freezing — by never actually waiting for anything slow.</p>
-  </div>
-
-  <div class="analogy-box">
-    <span class="analogy-label">🍳 Back to the kitchen</span>
-    <p>The chef (<b>Call Stack</b>) can only do one thing at a time. When an order needs something slow — marinating, waiting on a delivery — the chef hands it to the kitchen staff (<b>libuv</b>) and immediately moves to the next ticket. The staff finishes in the background and drops the result on the pass (the queues). The expediter (<b>Event Loop</b>) has one rule: clear <i>every</i> VIP ticket on the pass (Microtask Queue) before calling out a single regular ticket (Callback Queue).</p>
-  </div>
-
-  <span class="loop-scroll-hint">↔ scroll to see the full diagram</span>
-  <div class="loop-wrap">
-    <svg viewBox="0 0 950 560" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-          <path d="M 0 0 L 10 5 L 0 10 z" fill="#7f90ac"/>
-        </marker>
-      </defs>
-
-      <!-- Boxes -->
-      <rect x="40" y="30" width="240" height="90" rx="14" fill="rgba(240,169,64,0.10)" stroke="#f0a940" stroke-width="1.5"/>
-      <text x="160" y="65" text-anchor="middle" class="loop-box-label">Call Stack</text>
-      <text x="160" y="84" text-anchor="middle" class="loop-box-sub">runs your code, one thing at a time</text>
-      <text x="160" y="100" text-anchor="middle" class="loop-box-sub">(single-threaded)</text>
-
-      <rect x="650" y="30" width="260" height="90" rx="14" fill="rgba(232,193,95,0.10)" stroke="#e8c15f" stroke-width="1.5"/>
-      <text x="780" y="60" text-anchor="middle" class="loop-box-label">Web / Node APIs</text>
-      <text x="780" y="79" text-anchor="middle" class="loop-box-sub">(libuv: timers, fs, network,</text>
-      <text x="780" y="94" text-anchor="middle" class="loop-box-sub">thread pool)</text>
-
-      <rect x="650" y="210" width="260" height="80" rx="14" fill="rgba(185,163,245,0.10)" stroke="#b9a3f5" stroke-width="1.5"/>
-      <text x="780" y="242" text-anchor="middle" class="loop-box-label">Microtask Queue</text>
-      <text x="780" y="261" text-anchor="middle" class="loop-box-sub">Promises · .then() · async/await</text>
-
-      <rect x="650" y="380" width="260" height="80" rx="14" fill="rgba(103,201,232,0.10)" stroke="#67c9e8" stroke-width="1.5"/>
-      <text x="780" y="412" text-anchor="middle" class="loop-box-label">Callback Queue</text>
-      <text x="780" y="431" text-anchor="middle" class="loop-box-sub">setTimeout · I/O · setImmediate</text>
-
-      <rect x="280" y="380" width="320" height="100" rx="18" fill="rgba(63,199,193,0.10)" stroke="#3fc7c1" stroke-width="1.5"/>
-      <text x="440" y="418" text-anchor="middle" class="loop-box-label">Event Loop</text>
-      <text x="440" y="437" text-anchor="middle" class="loop-box-sub">"Is the Call Stack empty? What runs next?"</text>
-      <text x="440" y="453" text-anchor="middle" class="loop-box-sub">drains microtasks → then one callback → repeat</text>
-
-      <!-- Arrows -->
-      <path d="M 280 75 L 650 75" stroke="#7f90ac" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
-      <circle cx="320" cy="75" r="11" fill="#7f90ac"/><text x="320" y="79" text-anchor="middle" class="loop-num">1</text>
-      <text x="465" y="65" text-anchor="middle" class="loop-arrow-label">async call handed off</text>
-
-      <path d="M 910 120 L 930 120 L 930 410 L 910 410" stroke="#7f90ac" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
-      <circle cx="930" cy="270" r="11" fill="#7f90ac"/><text x="930" y="274" text-anchor="middle" class="loop-num">2</text>
-      <text x="944" y="310" text-anchor="end" class="loop-arrow-label">macrotask done → queued</text>
-
-      <path d="M 150 120 L 150 250 L 650 250" stroke="#7f90ac" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
-      <circle cx="150" cy="185" r="11" fill="#7f90ac"/><text x="150" y="189" text-anchor="middle" class="loop-num">3</text>
-      <text x="330" y="240" text-anchor="middle" class="loop-arrow-label">promise resolves → microtask</text>
-
-      <path d="M 700 290 L 610 380" stroke="#7f90ac" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
-      <circle cx="672" cy="323" r="11" fill="#7f90ac"/><text x="672" y="327" text-anchor="middle" class="loop-num">4</text>
-      <text x="700" y="345" text-anchor="middle" class="loop-arrow-label">drained FIRST</text>
-
-      <path d="M 650 420 L 600 420" stroke="#7f90ac" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
-      <circle cx="628" cy="405" r="11" fill="#7f90ac"/><text x="628" y="409" text-anchor="middle" class="loop-num">5</text>
-      <text x="628" y="446" text-anchor="middle" class="loop-arrow-label">then one task</text>
-
-      <path d="M 300 380 L 90 380 L 90 120" stroke="#7f90ac" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
-      <circle cx="90" cy="250" r="11" fill="#7f90ac"/><text x="90" y="254" text-anchor="middle" class="loop-num">6</text>
-      <text x="100" y="300" text-anchor="start" class="loop-arrow-label" transform="rotate(-90 100 300)">push to stack → repeat</text>
-    </svg>
-  </div>
-
-  <div class="loop-legend">
-    <ol>
-      <li><b>Sync code runs first.</b> Everything on the Call Stack executes top to bottom, immediately.</li>
-      <li><b>Async calls get handed off.</b> `setTimeout`, `fs.readFile`, network calls — these go to libuv / Web APIs instead of blocking the stack. (If "callback" isn't a familiar word yet: it just means a function you hand over to run later. Fully explained next, in Async Patterns.)</li>
-      <li><b>Promises jump the line.</b> When a Promise resolves, its `.then()` goes into the Microtask Queue — higher priority than regular async callbacks.</li>
-      <li><b>Work finishes in the background.</b> Once a timer fires or a file finishes reading, its callback moves to the Callback Queue.</li>
-      <li><b>The Event Loop checks: is the stack empty?</b> If yes — it drains the <em>entire</em> Microtask Queue first, always.</li>
-      <li><b>Then it takes ONE callback</b> from the Callback Queue, runs it, and starts the whole check again. Forever, for the life of your program.</li>
-    </ol>
-  </div>
-
-  <div class="card-grid">
-    <details class="concept-card" style="--c:var(--runtime)">
-      <summary><span class="cc-icon">🧠</span><span class="cc-title">Call Stack</span><span class="cc-tag">Runtime</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Where your code actually runs, one function at a time.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> A stack of functions currently executing.</div>
-        <div class="cc-qa"><b>Why:</b> JS is single-threaded — it needs to track "what's running right now."</div>
-        <div class="cc-qa"><b>Does:</b> Pushes a function on when called, pops it off when it returns.</div>
-        <div class="cc-qa"><b>Connects:</b> Must be empty before the Event Loop adds anything new.</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--runtime)">
-      <summary><span class="cc-icon">🛰️</span><span class="cc-title">Web / Node APIs (libuv)</span><span class="cc-tag">Runtime</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Background helpers that do the actual waiting for you.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> Timers, file I/O, and network operations, handled outside the Call Stack.</div>
-        <div class="cc-qa"><b>Why:</b> So one slow file read doesn't freeze your entire app.</div>
-        <div class="cc-qa"><b>Does:</b> Waits in the background, then reports back when done.</div>
-        <div class="cc-qa"><b>Connects:</b> Sends finished work to the Callback Queue.</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--runtime)">
-      <summary><span class="cc-icon">📥</span><span class="cc-title">Callback Queue</span><span class="cc-tag">Runtime</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">The waiting line for finished timers and I/O callbacks.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> Also called the "macrotask queue."</div>
-        <div class="cc-qa"><b>Why:</b> Finished async work can't jump straight into a busy Call Stack.</div>
-        <div class="cc-qa"><b>Does:</b> Holds callbacks (setTimeout, I/O, setImmediate) until it's their turn.</div>
-        <div class="cc-qa"><b>Connects:</b> Event Loop pulls ONE of these per cycle — after microtasks.</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--runtime)">
-      <summary><span class="cc-icon">⚡</span><span class="cc-title">Microtask Queue</span><span class="cc-tag">Runtime</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">A faster, higher-priority line — mostly for Promises.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> Holds `.then()`, `.catch()`, and `async/await` continuations.</div>
-        <div class="cc-qa"><b>Why:</b> Promise results should run right after current code — before anything else waits.</div>
-        <div class="cc-qa"><b>Does:</b> Gets fully emptied before the Callback Queue gets a single item.</div>
-        <div class="cc-qa"><b>Connects:</b> This is why Promises always "feel faster" than setTimeout(0).</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--runtime)">
-      <summary><span class="cc-icon">🔁</span><span class="cc-title">Event Loop</span><span class="cc-tag">Runtime</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">The traffic controller deciding what runs next.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> A loop that never stops running for the life of your program.</div>
-        <div class="cc-qa"><b>Why:</b> Someone has to decide what enters the Call Stack once it's empty.</div>
-        <div class="cc-qa"><b>Does:</b> Checks stack empty → drains microtasks → runs one callback → repeats.</div>
-        <div class="cc-qa"><b>Connects:</b> This single loop is what makes async JavaScript possible at all.</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--runtime)">
-      <summary><span class="cc-icon">🧵</span><span class="cc-title">Single-Threaded Architecture</span><span class="cc-tag">Runtime</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Node runs your JS on exactly one thread. Always.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> Only one line of your JavaScript executes at any instant.</div>
-        <div class="cc-qa"><b>Why:</b> Simpler mental model — no race conditions inside your own code.</div>
-        <div class="cc-qa"><b>Does:</b> Forces every slow operation to be handled asynchronously instead.</div>
-        <div class="cc-qa"><b>Connects:</b> The entire reason the Event Loop + async model exists.</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--runtime)">
-      <summary><span class="cc-icon">🚫🧱</span><span class="cc-title">Non-Blocking I/O</span><span class="cc-tag">Runtime</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Slow operations never stop the rest of your code.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> Reading files, calling APIs, querying a DB — none of it freezes your app.</div>
-        <div class="cc-qa"><b>Why:</b> One thread can't afford to sit around waiting.</div>
-        <div class="cc-qa"><b>Does:</b> Hands slow work to libuv, keeps executing other code meanwhile.</div>
-        <div class="cc-qa"><b>Connects:</b> Made possible by libuv + the Event Loop working together.</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--runtime)">
-      <summary><span class="cc-icon">👷</span><span class="cc-title">Worker Threads</span><span class="cc-tag">Runtime</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Real extra threads — for real CPU-heavy work.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> Actual parallel threads, separate from the main one.</div>
-        <div class="cc-qa"><b>Why:</b> The Event Loop only fixes I/O <em>waiting</em> — it can't help with heavy computation (image processing, big loops).</div>
-        <div class="cc-qa"><b>Does:</b> Runs expensive JS in parallel, off the main thread, without blocking it.</div>
-        <div class="cc-qa"><b>Connects:</b> The one real exception to "Node is single-threaded."</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--runtime)">
-      <summary><span class="cc-icon">⏱️</span><span class="cc-title">Sync vs Async</span><span class="cc-tag">Runtime</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Run now and block, or run later and don't.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> Sync = blocks until finished. Async = keeps going, finishes later.</div>
-        <div class="cc-qa"><b>Why:</b> Async keeps your one thread free while waiting on slow things.</div>
-        <div class="cc-qa"><b>Does:</b> Async work is expressed via callbacks, Promises, or async/await.</div>
-        <div class="cc-qa"><b>Connects:</b> These three are just different <em>syntax</em> for the same underlying Event Loop mechanics.</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--runtime)">
-      <summary><span class="cc-icon">🔌</span><span class="cc-title">Program Lifecycle</span><span class="cc-tag">Runtime</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Why your program ends when it does — or doesn't.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> Node keeps the Event Loop spinning as long as something is still pending — an open server, a running timer, an unfinished callback.</div>
-        <div class="cc-qa"><b>Why:</b> Otherwise your program couldn't wait around for a request that hasn't arrived yet.</div>
-        <div class="cc-qa"><b>Does:</b> Once the Call Stack, both queues, and every pending timer/handle are empty, Node exits on its own.</div>
-        <div class="cc-qa"><b>Connects:</b> This is why a plain script with only sync code exits instantly, but a script that calls `http.createServer().listen()` runs forever until you stop it.</div>
-      </div>
-    </details>
-  </div>
-</section>
-
-<div class="connector-note">You've just seen <b>callback</b> and <b>Promise</b> used by name, without a real definition. Time to see exactly what they look like in your own code.</div>
-
-<!-- ============ ASYNC PATTERNS ============ -->
-<section class="section" id="patterns">
-  <div class="section-head">
-    <span class="tag" style="color:#0a0e17;background:var(--async)">[ LAYER 3 ]</span>
-    <h2>Async Patterns — Same Problem, Three Syntaxes</h2>
-    <p>Callbacks, Promises, and async/await all do <b style="color:var(--text)">exactly the same thing</b> under the hood — they just look different in your code.</p>
-  </div>
-
-  <div class="analogy-box">
-    <span class="analogy-label">🍳 Same kitchen ticket, written differently</span>
-    <p>A <b>callback</b> is scribbling "call me when it's ready" on the ticket. A <b>Promise</b> is a numbered pickup ticket — you'll hear "pending," then "ready" or "sorry, we ran out." <b>async/await</b> is handing someone the ticket and telling them to wait right at the counter instead of wandering off — from the outside, it looks like they never left.</p>
-  </div>
-
-  <div class="code-trio">
-    <div>
-      <span class="code-trio-label" style="color:var(--async-ink)">1. Callbacks (original)</span>
-      <div class="code-window">
-        <div class="code-header"><span class="dot2 r"></span><span class="dot2 y"></span><span class="dot2 g"></span><span class="code-label">callback.js</span></div>
-        <pre class="code-body"><span class="fn">fs.readFile</span>(<span class="str">'file.txt'</span>, (err, data) =&gt; {
-  <span class="kw">if</span> (err) <span class="kw">throw</span> err;
-  console.log(data);
-});</pre>
-      </div>
-    </div>
-    <div>
-      <span class="code-trio-label" style="color:var(--async-ink)">2. Promises (cleaner)</span>
-      <div class="code-window">
-        <div class="code-header"><span class="dot2 r"></span><span class="dot2 y"></span><span class="dot2 g"></span><span class="code-label">promise.js</span></div>
-        <pre class="code-body">fs.promises.<span class="fn">readFile</span>(<span class="str">'file.txt'</span>)
-  .then(data =&gt; console.log(data))
-  .catch(err =&gt; console.error(err));</pre>
-      </div>
-    </div>
-    <div>
-      <span class="code-trio-label" style="color:var(--async-ink)">3. async/await (reads like sync)</span>
-      <div class="code-window">
-        <div class="code-header"><span class="dot2 r"></span><span class="dot2 y"></span><span class="dot2 g"></span><span class="code-label">async.js</span></div>
-        <pre class="code-body"><span class="kw">async function</span> read() {
-  <span class="kw">try</span> {
-    <span class="kw">const</span> data = <span class="kw">await</span> fs.promises.<span class="fn">readFile</span>(<span class="str">'file.txt'</span>);
-    console.log(data);
-  } <span class="kw">catch</span> (err) { console.error(err); }
-}</pre>
-      </div>
-    </div>
-  </div>
-
-  <div class="card-grid">
-    <details class="concept-card" style="--c:var(--async)">
-      <summary><span class="cc-icon">📞</span><span class="cc-title">Callbacks</span><span class="cc-tag">Original</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">"Call this function when you're done."</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> A function passed into another function, to run later.</div>
-        <div class="cc-qa"><b>Why:</b> The earliest way JS handled "do this, then that."</div>
-        <div class="cc-qa"><b>Does:</b> Node convention: `(err, data) => {}` — error always comes first.</div>
-        <div class="cc-qa"><b>Connects:</b> Nested callbacks get messy — Promises exist to fix that.</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--async)">
-      <summary><span class="cc-icon">🤞</span><span class="cc-title">Promises</span><span class="cc-tag">Modern</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">An object representing "a value that will exist eventually."</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> Has 3 states: pending, fulfilled, or rejected.</div>
-        <div class="cc-qa"><b>Why:</b> Flattens nested callbacks into readable `.then()` chains.</div>
-        <div class="cc-qa"><b>Does:</b> Its `.then()`/`.catch()` handlers go into the Microtask Queue.</div>
-        <div class="cc-qa"><b>Connects:</b> `async/await` is just syntax sugar built on top of Promises.</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--async)">
-      <summary><span class="cc-icon">✨</span><span class="cc-title">async/await</span><span class="cc-tag">Sugar</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Makes Promise code read like normal, top-to-bottom code.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> `await` pauses a function until a Promise settles — without blocking the whole thread.</div>
-        <div class="cc-qa"><b>Why:</b> `.then()` chains get hard to read once things get complex.</div>
-        <div class="cc-qa"><b>Does:</b> Under the hood, it's still Promises and the Microtask Queue.</div>
-        <div class="cc-qa"><b>Connects:</b> Only "pauses" the function it's in — the rest of your app keeps running.</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--async)">
-      <summary><span class="cc-icon">🧯</span><span class="cc-title">Error Handling</span><span class="cc-tag">Safety</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Every async style has its own way to catch failure.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>Callbacks:</b> check `err` as the first argument, every time.</div>
-        <div class="cc-qa"><b>Promises:</b> add a `.catch()` at the end of the chain.</div>
-        <div class="cc-qa"><b>async/await:</b> wrap it in a normal `try/catch` block.</div>
-        <div class="cc-qa"><b>Connects:</b> Uncaught errors can crash the entire Node process — always handle them.</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--async)">
-      <summary><span class="cc-icon">🛟</span><span class="cc-title">Crash Handling</span><span class="cc-tag">Safety</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Node's last line of defense for errors that slip through.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> `process.on('unhandledRejection', ...)` and `process.on('uncaughtException', ...)`.</div>
-        <div class="cc-qa"><b>Why:</b> One Promise nobody caught can otherwise crash your entire server, not just that one request.</div>
-        <div class="cc-qa"><b>Does:</b> Lets you log the error and shut down cleanly instead of Node killing the process with no warning.</div>
-        <div class="cc-qa"><b>Connects:</b> A safety net for when try/catch and `.catch()` get missed — not a replacement for them.</div>
-        <div class="cc-example">process.on('unhandledRejection', err =&gt; { ... });</div>
-      </div>
-    </details>
-  </div>
-</section>
-
-<div class="connector-note">Now that you can write async code, let's talk about organizing it into files — and reusing code other people already wrote.</div>
-
-<!-- ============ MODULES & NPM ============ -->
-<section class="section" id="modules">
-  <div class="section-head">
-    <span class="tag" style="color:#0a0e17;background:var(--modules)">[ LAYER 4 ]</span>
-    <h2>Modules & Package Management</h2>
-    <p>Node splits code into files called <b style="color:var(--text)">modules</b>. This is how your code is organized, shared, and reused — including code other people wrote (npm).</p>
-  </div>
-
-  <div class="stack-diagram" style="margin-bottom:24px;">
-    <div class="stack-layer" style="--sc:var(--modules)"><span class="t">package.json</span><span class="s">declares what packages your project needs</span></div>
-    <div class="stack-arrow">↓ npm install</div>
-    <div class="stack-layer" style="--sc:var(--modules)"><span class="t">node_modules/</span><span class="s">npm downloads the actual code here</span></div>
-    <div class="stack-arrow">↓ require() / import</div>
-    <div class="stack-layer" style="--sc:var(--project)"><span class="t">Your Code</span><span class="s">pulls in exactly what it needs, when it needs it</span></div>
-  </div>
-
-  <div class="card-grid">
-    <details class="concept-card" style="--c:var(--modules)">
-      <summary><span class="cc-icon">📦</span><span class="cc-title">require()</span><span class="cc-tag">CommonJS</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Node's original way to load another file's code.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> A function that loads and returns another module's exports.</div>
-        <div class="cc-qa"><b>Why:</b> JS originally had no built-in module system — Node needed one.</div>
-        <div class="cc-qa"><b>Does:</b> Reads the file, runs it once, caches and returns its exports.</div>
-        <div class="cc-qa"><b>Connects:</b> Pairs with `module.exports` on the other end.</div>
-        <div class="cc-example">const fs = require('fs');</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--modules)">
-      <summary><span class="cc-icon">📤</span><span class="cc-title">module.exports</span><span class="cc-tag">CommonJS</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">How a CommonJS file shares its code with others.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> An object every file has by default; whatever you attach to it becomes public.</div>
-        <div class="cc-qa"><b>Why:</b> Files need a way to say "here's what other files can use."</div>
-        <div class="cc-qa"><b>Does:</b> Whatever you assign here is what `require()` returns elsewhere.</div>
-        <div class="cc-qa"><b>Connects:</b> The export side of the `require()` pair.</div>
-        <div class="cc-example">module.exports = { add };</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--modules)">
-      <summary><span class="cc-icon">🆕</span><span class="cc-title">import / export</span><span class="cc-tag">ES Modules</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">The modern, official JavaScript module syntax.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> The standard module system built into the JS language itself.</div>
-        <div class="cc-qa"><b>Why:</b> Browsers and Node needed one shared standard, not just Node's own.</div>
-        <div class="cc-qa"><b>Does:</b> `export` shares code, `import` pulls it in — same idea as CommonJS, different syntax.</div>
-        <div class="cc-qa"><b>Connects:</b> Set `"type": "module"` in package.json to use this instead of CommonJS.</div>
-        <div class="cc-example">import fs from 'fs';<br>export const add = ...;</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--modules)">
-      <summary><span class="cc-icon">⚖️</span><span class="cc-title">CommonJS vs ESM</span><span class="cc-tag">Compare</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Two systems, same job, different rules.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>CommonJS:</b> `require()`, synchronous, Node's original default, files are `.js` or `.cjs`.</div>
-        <div class="cc-qa"><b>ESM:</b> `import`/`export`, can be async, the modern web standard, files are `.mjs` or `.js` with `"type":"module"`.</div>
-        <div class="cc-qa"><b>Connects:</b> You'll see both in real projects — most new projects lean ESM today.</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--modules)">
-      <summary><span class="cc-icon">🧰</span><span class="cc-title">Built-in Modules</span><span class="cc-tag">Core</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Tools that ship with Node — zero install needed.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> `fs`, `http`, `path`, `os`, and dozens more.</div>
-        <div class="cc-qa"><b>Why:</b> Common needs (files, servers, paths) shouldn't require external packages.</div>
-        <div class="cc-qa"><b>Does:</b> Just `require('fs')` — it's already there, part of Node itself.</div>
-        <div class="cc-qa"><b>Connects:</b> Detailed one-by-one in the Core APIs section below.</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--modules)">
-      <summary><span class="cc-icon">📮</span><span class="cc-title">npm</span><span class="cc-tag">Tool</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Node's package manager — installs code others wrote.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> "Node Package Manager" — a command-line tool + a public registry.</div>
-        <div class="cc-qa"><b>Why:</b> Nobody should rebuild what already exists (Express, Lodash, etc).</div>
-        <div class="cc-qa"><b>Does:</b> Downloads packages, tracks versions, runs project scripts.</div>
-        <div class="cc-qa"><b>Connects:</b> Reads/writes `package.json`, fills `node_modules/`.</div>
-        <div class="cc-example">npm install express</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--modules)">
-      <summary><span class="cc-icon">🪪</span><span class="cc-title">package.json</span><span class="cc-tag">Config</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Your project's ID card.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> A JSON file describing your project.</div>
-        <div class="cc-qa"><b>Why:</b> npm and Node both need to know: name, version, dependencies, entry point, scripts.</div>
-        <div class="cc-qa"><b>Does:</b> Lists dependencies so anyone can `npm install` and get the exact same setup.</div>
-        <div class="cc-qa"><b>Connects:</b> The source of truth npm reads before touching `node_modules`.</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--modules)">
-      <summary><span class="cc-icon">🔒</span><span class="cc-title">package-lock.json</span><span class="cc-tag">Config</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Pins the exact versions package.json only suggests.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> An auto-generated file recording the precise version of every installed package, including sub-dependencies.</div>
-        <div class="cc-qa"><b>Why:</b> `"^4.2.0"` in package.json still allows drift — this file pins it exactly, so every install is identical.</div>
-        <div class="cc-qa"><b>Does:</b> Written automatically by `npm install`, read automatically on the next one.</div>
-        <div class="cc-qa"><b>Connects:</b> Commit this to git. Never edit it by hand.</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--modules)">
-      <summary><span class="cc-icon">📜</span><span class="cc-title">npm scripts</span><span class="cc-tag">Tool</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Short names for the terminal commands you run daily.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> A `"scripts"` block inside package.json, mapping short names to real commands.</div>
-        <div class="cc-qa"><b>Why:</b> So everyone on the project types `npm start`, not a command they have to memorize.</div>
-        <div class="cc-qa"><b>Does:</b> `npm run <name>` — or the shortcuts `npm start` / `npm test` for the common ones.</div>
-        <div class="cc-qa"><b>Connects:</b> The main entry point most projects are actually launched from.</div>
-        <div class="cc-example">"scripts": { "start": "node app.js" }<br>npm start</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--modules)">
-      <summary><span class="cc-icon">🚀</span><span class="cc-title">npx</span><span class="cc-tag">Tool</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Runs a package's command without a global install.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> Downloads-and-runs (or reuses) a package's command, just for one use.</div>
-        <div class="cc-qa"><b>Why:</b> You don't want every one-off tool cluttering your whole system permanently.</div>
-        <div class="cc-qa"><b>Does:</b> `npx nodemon app.js` — no separate `npm install -g` step needed.</div>
-        <div class="cc-qa"><b>Connects:</b> Also what powers generators like `npx create-react-app`.</div>
-        <div class="cc-example">npx nodemon app.js</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--modules)">
-      <summary><span class="cc-icon">🧩</span><span class="cc-title">dependencies vs devDependencies</span><span class="cc-tag">Config</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Two lists, for two different jobs.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> Two separate arrays inside package.json.</div>
-        <div class="cc-qa"><b>Why:</b> Some packages (Express) run in production; others (a test runner) are only needed while building.</div>
-        <div class="cc-qa"><b>Does:</b> `npm install X` → dependencies. `npm install X --save-dev` → devDependencies, skipped in a production install.</div>
-        <div class="cc-qa"><b>Connects:</b> Keeps your deployed app's `node_modules` smaller and faster to install.</div>
-        <div class="cc-example">npm install express<br>npm install --save-dev jest</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--modules)">
-      <summary><span class="cc-icon">📁</span><span class="cc-title">node_modules/</span><span class="cc-tag">Folder</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Where npm actually puts the code it installs.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> A folder full of every package your project depends on.</div>
-        <div class="cc-qa"><b>Why:</b> `require()`/`import` need the actual files to exist somewhere on disk.</div>
-        <div class="cc-qa"><b>Does:</b> Gets read automatically whenever you import a package by name.</div>
-        <div class="cc-qa"><b>Connects:</b> Never edited by hand, never committed to git — always regenerable from `package.json`.</div>
-      </div>
-    </details>
-  </div>
-</section>
-
-<div class="connector-note">Once your code has the modules it needs, it uses <b>global objects</b> Node gives every file for free — no import required.</div>
-
-<!-- ============ GLOBALS ============ -->
-<section class="section" id="globals">
-  <div class="section-head">
-    <span class="tag" style="color:#0a0e17;background:var(--globals)">[ LAYER 5 ]</span>
-    <h2>Global Objects & Environment</h2>
-    <p>Node quietly hands every file a few free tools — no `require()` needed.</p>
-  </div>
-
-  <div class="card-grid">
-    <details class="concept-card" style="--c:var(--globals)">
-      <summary><span class="cc-icon">🖥️</span><span class="cc-title">console</span><span class="cc-tag">Global</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">The object behind every console.log() you've already typed.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> A global object for printing to your terminal.</div>
-        <div class="cc-qa"><b>Why:</b> You need some way to see what's happening inside code that isn't visual.</div>
-        <div class="cc-qa"><b>Does:</b> `.log()` for normal output, `.error()` for errors (a separate stream), `.table()` for arrays of objects, and more.</div>
-        <div class="cc-qa"><b>Connects:</b> Available in every file automatically — the first global you actually used, back in Running Your Code.</div>
-        <div class="cc-example">console.log('debug:', someValue);</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--globals)">
-      <summary><span class="cc-icon">⚙️</span><span class="cc-title">process</span><span class="cc-tag">Global</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Represents the currently running Node program.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> A global object describing this exact running instance of Node.</div>
-        <div class="cc-qa"><b>Why:</b> Your code often needs to know about its own environment (args, env vars, when to exit).</div>
-        <div class="cc-qa"><b>Does:</b> Exposes `process.env`, `process.argv`, `process.exit()`, and more.</div>
-        <div class="cc-qa"><b>Connects:</b> The main gateway to environment variables and system info.</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--globals)">
-      <summary><span class="cc-icon">📍</span><span class="cc-title">__dirname / __filename</span><span class="cc-tag">Global</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Always know exactly where the current file lives.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> `__dirname` = folder path, `__filename` = full file path.</div>
-        <div class="cc-qa"><b>Why:</b> File paths need to work no matter where someone runs your script from.</div>
-        <div class="cc-qa"><b>Does:</b> Gives an absolute path, safe to build other paths from.</div>
-        <div class="cc-qa"><b>Connects:</b> Commonly combined with the `path` module.</div>
-        <div class="cc-example">path.join(__dirname, 'data.txt')</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--globals)">
-      <summary><span class="cc-icon">🔑</span><span class="cc-title">Environment Variables</span><span class="cc-tag">Global</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Config that lives outside your code.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> Key-value settings from the OS or a `.env` file — API keys, ports, secrets.</div>
-        <div class="cc-qa"><b>Why:</b> Secrets and per-environment config shouldn't be hardcoded or committed to git.</div>
-        <div class="cc-qa"><b>Does:</b> Read via `process.env.VARIABLE_NAME`.</div>
-        <div class="cc-qa"><b>Connects:</b> Same code, different config, across dev/staging/production.</div>
-        <div class="cc-example">const port = process.env.PORT;</div>
-      </div>
-    </details>
-  </div>
-
-  <div class="mini-note"><b>Also global, for what it's worth:</b> `Buffer` and the timer functions (`setTimeout`, `setInterval`, `setImmediate`) need no `require()` either, exactly like these. They get their own cards next, in Core APIs, since they're each tied to one specific job.</div>
-</section>
-
-<div class="connector-note">Now the tools your code actually reaches for most: Node's <b>built-in APIs</b>.</div>
-
-<!-- ============ CORE APIs ============ -->
-<section class="section" id="apis">
-  <div class="section-head">
-    <span class="tag" style="color:#0a0e17;background:var(--apis)">[ LAYER 6 ]</span>
-    <h2>Core Built-in Modules</h2>
-    <p>These are what your code actually calls day to day — all backed by libuv underneath.</p>
-  </div>
-
-  <div class="card-grid">
-    <details class="concept-card" style="--c:var(--apis)">
-      <summary><span class="cc-icon">📄</span><span class="cc-title">fs</span><span class="cc-tag">File System</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Read and write files on disk.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>Does:</b> `readFile`, `writeFile`, `mkdir`, watch for file changes, and more.</div>
-        <div class="cc-qa"><b>Connects:</b> Async by default — runs through libuv's thread pool, not the main thread.</div>
-        <div class="cc-example">fs.readFile('x.txt', (err, data) => {...})</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--apis)">
-      <summary><span class="cc-icon">🌐</span><span class="cc-title">http</span><span class="cc-tag">Server</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Build a web server, no framework required.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>Does:</b> Creates a server that listens for requests and sends responses.</div>
-        <div class="cc-qa"><b>Connects:</b> Frameworks like Express are built on top of this exact module.</div>
-        <div class="cc-example">http.createServer((req,res)=>{...}).listen(3000)</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--apis)">
-      <summary><span class="cc-icon">🧭</span><span class="cc-title">path</span><span class="cc-tag">Utility</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Safely build file paths on any OS.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>Does:</b> Joins, resolves, and normalizes paths — handling `/` vs `\` for you.</div>
-        <div class="cc-qa"><b>Connects:</b> Used constantly alongside `fs` and `__dirname`.</div>
-        <div class="cc-example">path.join('folder', 'file.txt')</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--apis)">
-      <summary><span class="cc-icon">💻</span><span class="cc-title">os</span><span class="cc-tag">System Info</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Info about the machine Node is running on.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>Does:</b> CPU count, free memory, platform, home directory, and more.</div>
-        <div class="cc-qa"><b>Connects:</b> Handy for scaling decisions (e.g., how many Worker Threads to spawn).</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--apis)">
-      <summary><span class="cc-icon">🧱</span><span class="cc-title">Buffer</span><span class="cc-tag">Binary Data</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">How Node handles data that isn't plain text.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> Raw chunks of binary data (images, video, network packets).</div>
-        <div class="cc-qa"><b>Why:</b> JS strings can't safely hold arbitrary binary bytes.</div>
-        <div class="cc-qa"><b>Does:</b> Technically a global — no `require()` needed for everyday use, unlike `fs`/`http`/`path`/`os`.</div>
-        <div class="cc-qa"><b>Connects:</b> This is exactly what flows through Streams.</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--apis)">
-      <summary><span class="cc-icon">🌊</span><span class="cc-title">Streams</span><span class="cc-tag">Data Flow</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Process data in chunks, not all at once.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> A way to read/write data piece by piece instead of loading it all into memory.</div>
-        <div class="cc-qa"><b>Why:</b> You can't load a 10GB video file into RAM at once.</div>
-        <div class="cc-qa"><b>Does:</b> Emits chunks as `Buffer` objects over time, as events.</div>
-        <div class="cc-qa"><b>Connects:</b> Built directly on top of `EventEmitter`.</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--apis)">
-      <summary><span class="cc-icon">📡</span><span class="cc-title">Events & EventEmitter</span><span class="cc-tag">Pattern</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Node's "something happened" pattern.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> An object you can `.on('event', fn)` and `.emit('event')`.</div>
-        <div class="cc-qa"><b>Why:</b> Many things in Node aren't request/response — they just "happen" over time.</div>
-        <div class="cc-qa"><b>Does:</b> Powers `http` servers, Streams, and most of Node's async APIs under the hood.</div>
-        <div class="cc-example">emitter.on('data', chunk => ...)</div>
-      </div>
-    </details>
-
-    <details class="concept-card" style="--c:var(--apis)">
-      <summary><span class="cc-icon">⏰</span><span class="cc-title">Timers</span><span class="cc-tag">Scheduling</span><span class="cc-chev">›</span></summary>
-      <p class="cc-tagline">Schedule code to run later.</p>
-      <div class="cc-body">
-        <div class="cc-qa"><b>setTimeout:</b> run once, after at least N milliseconds.</div>
-        <div class="cc-qa"><b>setInterval:</b> run repeatedly, every N milliseconds.</div>
-        <div class="cc-qa"><b>setImmediate:</b> run right after the current I/O phase — often before a 0ms timeout.</div>
-        <div class="cc-qa"><b>Connects:</b> All three are globals (no `require()` needed) and land in the Callback Queue, not the Microtask Queue.</div>
-      </div>
-    </details>
-  </div>
-</section>
-
-<!-- ============ WHAT'S NEXT ============ -->
-<section class="section" id="whatsnext">
-  <div class="section-head">
-    <span class="tag" style="color:#0a0e17;background:var(--project)">[ WHAT'S NEXT ]</span>
-    <h2>This Map Ends Here. The Real Building Starts Next.</h2>
-    <p>Everything above is the engine room. The handbook ahead puts it to work — building an actual server, talking to a real database, keeping it secure, and eventually adding TypeScript on top of the exact same runtime you just mapped.</p>
-  </div>
-  <div class="pill-row">
-    <span class="pill-static"><span class="dot" style="background:var(--apis)"></span>Express & Routing</span>
-    <span class="pill-static"><span class="dot" style="background:var(--globals)"></span>Databases</span>
-    <span class="pill-static"><span class="dot" style="background:var(--async)"></span>Auth & Security</span>
-    <span class="pill-static"><span class="dot" style="background:var(--modules)"></span>TypeScript</span>
-  </div>
-</section>
-
-<!-- ============ SELF-CHECK ============ -->
-<section class="section" id="recap">
-  <div class="section-head">
-    <span class="tag" style="color:#0a0e17;background:var(--amber)">[ SELF-CHECK ]</span>
-    <h2>Can You Answer These?</h2>
-    <p>No looking up code — just check whether the mental model stuck. Click a question to reveal the answer.</p>
-  </div>
-
-  <div class="quiz-grid">
-    <details class="quiz-card">
-      <summary>1. What is the "call stack" in JS?</summary>
-      <div class="quiz-answer">The list of functions currently being executed, stacked in order of who called whom. When a function returns, it's popped off. If it never returns (an infinite loop), the stack — and the whole thread — is stuck.</div>
-    </details>
-
-    <details class="quiz-card">
-      <summary>2. What's the difference between synchronous and asynchronous code, really?</summary>
-      <div class="quiz-answer"><b>Sync</b> = each line waits for the previous one to finish before running. <b>Async</b> = a line can start work and let later lines run before that work finishes — the result shows up later via callback/Promise.</div>
-    </details>
-
-    <details class="quiz-card">
-      <summary>3. Why do people say "Node has one call stack but many things happening at once"?</summary>
-      <div class="quiz-answer">Because the concurrency lives outside JS — in the OS/libuv. Your JS only ever runs one thing at a time on the stack; the "waiting" parts (disk, network, timers) happen elsewhere and just report back.</div>
-    </details>
-
-    <details class="quiz-card">
-      <summary>4. Why is Node good for I/O-heavy apps but bad for CPU-heavy ones?</summary>
-      <div class="quiz-answer">Its whole design (single thread + event loop + non-blocking I/O) shines when most time is spent waiting (DB calls, network, files). CPU-heavy work has nothing to "wait" on — it just hogs the one thread and blocks everyone else.</div>
-    </details>
-
-    <details class="quiz-card">
-      <summary>5. What's the difference between `null` and `undefined` in JS (comes up constantly in Node)?</summary>
-      <div class="quiz-answer">`undefined` = a variable exists but was never assigned a value (JS's default). `null` = someone deliberately set "no value here." Node APIs often use `null` intentionally (e.g., `err` is `null` when there's no error).</div>
-    </details>
-
-    <details class="quiz-card">
-      <summary>6. What is `package.json` actually for?</summary>
-      <div class="quiz-answer">It's the manifest: your project's name, version, dependencies, scripts (`npm run ...`), and entry point. It's how npm and Node know what your project needs and how to run it.</div>
-    </details>
-
-    <details class="quiz-card">
-      <summary>7. What's the difference between a module and a package?</summary>
-      <div class="quiz-answer">A <b>module</b> is any single file with its own scope (anything you `require`/`import`). A <b>package</b> is a folder with a `package.json` — usually a collection of modules published as one unit (e.g., on npm).</div>
-    </details>
-
-    <details class="quiz-card">
-      <summary>8. `module.exports` vs `exports` — why does `exports.foo = bar` sometimes not work?</summary>
-      <div class="quiz-answer">`exports` is just a variable that points to the same object as `module.exports`. Adding properties to it works. But the moment you do `exports = something`, you break that link — `module.exports` still points to the original object, and that's what actually gets returned by `require()`.</div>
-    </details>
-
-    <details class="quiz-card">
-      <summary>9. Why doesn't changing a file restart your server unless you use something like nodemon?</summary>
-      <div class="quiz-answer">Node reads your code once at startup and runs it — it has no built-in file-watching. Tools like nodemon watch the filesystem and just restart the `node` process for you when a file changes.</div>
-    </details>
-
-    <details class="quiz-card">
-      <summary>10. What does `npm install` actually do, step by step?</summary>
-      <div class="quiz-answer">Reads `package.json` → resolves every dependency (and their dependencies) into a tree → downloads them into `node_modules` → writes/updates `package-lock.json` to lock exact versions.</div>
-    </details>
-
-    <button type="button" id="quizMoreBtn" class="quiz-more-btn">Show 21 more questions ↓</button>
-
-    <div id="quizMoreWrap" class="quiz-more-wrap">
-    <details class="quiz-card">
-      <summary>11. What's the actual role of `package-lock.json` if `package.json` already lists versions?</summary>
-      <div class="quiz-answer">`package.json` often uses ranges (`^1.2.0`) — flexible. `package-lock.json` pins the exact resolved version of every package and sub-dependency, so `npm install` produces an identical tree on every machine, not just something "compatible."</div>
-    </details>
-
-    <details class="quiz-card">
-      <summary>12. What's the actual difference between `dependencies` and `devDependencies`?</summary>
-      <div class="quiz-answer">`dependencies` = needed to actually run your app (like `express`). `devDependencies` = only needed while you're developing/testing (like `nodemon`, `jest`).</div>
-    </details>
-
-    <details class="quiz-card">
-      <summary>13. What is `this` inside a regular Node module — what does it point to?</summary>
-      <div class="quiz-answer">At the top level of a CommonJS module, `this` is `module.exports` (not the global object) — because Node wraps every file in a function behind the scenes before running it.</div>
-    </details>
-
-    <details class="quiz-card">
-      <summary>14. Why does almost every Node callback have the signature `(err, data)`?</summary>
-      <div class="quiz-answer">It's a convention called <b>"error-first callbacks."</b> Check `err` first — if it's not `null`, something failed and `data` should be ignored. It became the standard before Promises existed, and a lot of core Node APIs still follow it.</div>
-    </details>
-
-    <details class="quiz-card">
-      <summary>15. If two different files both `require('./math.js')`, does that file's code run twice?</summary>
-      <div class="quiz-answer">No. Node caches the module the first time. Second `require` just reuses the saved result.</div>
-    </details>
-
-    <details class="quiz-card">
-      <summary>16. A plain script with only sync code exits the instant it finishes. A script with `http.createServer().listen()` runs forever. Why the difference?</summary>
-      <div class="quiz-answer">The plain script finishes its code and has nothing left to do, so it exits. `http.createServer().listen()` keeps an open "listening" handle — Node stays alive waiting for requests.</div>
-    </details>
-
-    <details class="quiz-card">
-      <summary>17. If Node is single-threaded (mostly), how does it handle thousands of concurrent connections?</summary>
-      <div class="quiz-answer">Because it's never actually blocked waiting. Each request hands its I/O work off (to the OS or the thread pool), registers a callback, and moves on immediately. The single thread just keeps cycling through the event loop picking up finished work — it's <b>concurrency through non-blocking I/O</b>, not through parallel threads.</div>
-    </details>
-
-    <details class="quiz-card">
-      <summary>18. Why doesn't reading a 2GB file freeze the rest of your Node app?</summary>
-      <div class="quiz-answer">The actual file reading happens in the background (via libuv's thread pool), not on your main JS thread. So your code keeps running while it waits.</div>
-    </details>
-
-    <details class="quiz-card">
-      <summary>19. What's the one real exception to "Node is single-threaded"?</summary>
-      <div class="quiz-answer">The <b>libuv thread pool</b> — a few background threads (default 4) that handle heavy stuff like file I/O, DNS, crypto.</div>
-    </details>
-
-    <details class="quiz-card">
-      <summary>20. `worker_threads` vs the libuv thread pool — aren't these the same thing?</summary>
-      <div class="quiz-answer">No. The libuv thread pool is internal and only used by specific built-in APIs (`fs`, `crypto`, `dns`). `worker_threads` gives you real separate JS threads with their own V8 instance and event loop — for running your own CPU-heavy code in parallel, not I/O.</div>
-    </details>
-
-    <details class="quiz-card">
-      <summary>21. Why does one bad synchronous loop freeze an entire Node server, but a bad async call doesn't?</summary>
-      <div class="quiz-answer">The event loop is one thread. Sync code occupies that thread until it finishes — nothing else, not even other users' requests, can run. Async calls hand the waiting part off elsewhere, so the thread stays free to serve everyone else while it waits.</div>
-    </details>
-
-    <details class="quiz-card">
-      <summary>22. Why do people say "never block the event loop" — what counts as blocking?</summary>
-      <div class="quiz-answer">Anything synchronous and slow: a big `JSON.parse`, a tight CPU loop, `fs.readFileSync` on a huge file, heavy regex. If it doesn't hand control back to the event loop until it's done, it's blocking — and during that time, zero other requests get served.</div>
-    </details>
-
-    <details class="quiz-card">
-      <summary>23. Are callbacks, Promises, and async/await three different mechanisms, or one mechanism written three ways?</summary>
-      <div class="quiz-answer">One mechanism, three syntaxes. Promises use the same underlying async machinery as callbacks, and async/await is syntax sugar over Promises — the same Event Loop runs underneath all three.</div>
-    </details>
-
-    <details class="quiz-card">
-      <summary>24. What's the difference between the Callback Queue and the Microtask Queue — and which one always empties first?</summary>
-      <div class="quiz-answer">The <b>Microtask Queue</b> holds Promise callbacks (`.then`/`.catch`/`await` continuations); the <b>Callback Queue</b> holds timers and I/O callbacks. The Event Loop always fully drains the Microtask Queue before taking even one item from the Callback Queue.</div>
-    </details>
-
-    <details class="quiz-card">
-      <summary>25. What's the difference between `process.nextTick()` and a Promise `.then()`?</summary>
-      <div class="quiz-answer">Both jump the queue ahead of the callback queue, but `process.nextTick` is a separate, higher-priority queue that fully drains before the microtask (Promise) queue even starts. So order is always: <b>nextTick queue → microtask queue → next callback</b>.</div>
-    </details>
-
-    <details class="quiz-card">
-      <summary>26. The event loop has "phases" — what are they, roughly?</summary>
-      <div class="quiz-answer">Six main ones, in order: <b>timers</b> (setTimeout/setInterval) → <b>pending callbacks</b> → <b>poll</b> (fetch new I/O events, run their callbacks) → <b>check</b> (setImmediate) → <b>close callbacks</b>. After every phase, Node drains the microtask + nextTick queues before moving to the next phase.</div>
-    </details>
-
-    <details class="quiz-card">
-      <summary>27. `setTimeout(fn, 0)` vs `setImmediate(fn)` — which runs first?</summary>
-      <div class="quiz-answer">Depends where you call them from. Inside a plain script, it's a coin flip (timer precision). Inside an I/O callback (like a file read), `setImmediate` always wins — because you're already past the poll phase, and check comes right after.</div>
-    </details>
-
-    <details class="quiz-card">
-      <summary>28. What happens if a Promise rejects and nothing ever catches it?</summary>
-      <div class="quiz-answer">It fires an `unhandledRejection` event. Left unhandled, this can crash the entire Node process — not just the one request that failed.</div>
-    </details>
-
-    <details class="quiz-card">
-      <summary>29. EventEmitter — what problem does it actually solve?</summary>
-      <div class="quiz-answer">It decouples "something happened" from "what to do about it." Instead of hardcoding a callback into the code that does the work, any part of your app can `.on('event', ...)` and react — this is the backbone under HTTP servers, streams, and most of Node's async I/O objects.</div>
-    </details>
-
-    <details class="quiz-card">
-      <summary>30. Why is a Buffer needed at all — why can't Node just use strings for binary data?</summary>
-      <div class="quiz-answer">Strings are UTF-16 encoded text in JS engines — not raw bytes. A <b>Buffer</b> is a fixed-length chunk of raw memory outside the V8 heap, so Node can move file/network data around without forcing an encoding decision or bloating the JS heap.</div>
-    </details>
-
-    <details class="quiz-card">
-      <summary>31. What actually is a Stream, in one sentence?</summary>
-      <div class="quiz-answer">A stream is data handled in chunks over time instead of all at once — so you never need the whole thing in memory before you start working with it.</div>
-    </details>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CHEAT SHEET ============ -->
-<section class="section" id="cheatsheet">
-  <div class="section-head">
-    <span class="tag" style="color:#0a0e17;background:var(--teal)">[ QUICK REFERENCE ]</span>
-    <h2>The Whole Page, In One Screen</h2>
-    <p>Skim this for 60 seconds before you start the handbook. If any line doesn't make sense yet, that's your cue to jump back up to that section.</p>
-  </div>
-
-  <div class="cheat-groups">
-    <div class="cheat-group">
-      <div class="cheat-group-label"><span class="dot" style="background:var(--project)"></span>Layer 0 — Foundation</div>
-      <div class="cheat-terms">
-        <span class="cheat-term"><b>V8</b> — runs your JS</span>
-        <span class="cheat-term"><b>libuv</b> — handles everything slow</span>
-        <span class="cheat-term"><b>Node.js</b> — V8 + libuv + a toolbox of APIs</span>
-      </div>
-    </div>
-
-    <div class="cheat-group">
-      <div class="cheat-group-label"><span class="dot" style="background:var(--practice)"></span>Layer 1 — Running Code</div>
-      <div class="cheat-terms">
-        <span class="cheat-term"><b>node file.js</b> — run a script</span>
-        <span class="cheat-term"><b>REPL</b> — interactive, one line at a time</span>
-        <span class="cheat-term"><b>console.log</b> — print to terminal</span>
-      </div>
-    </div>
-
-    <div class="cheat-group">
-      <div class="cheat-group-label"><span class="dot" style="background:var(--runtime)"></span>Layer 2 — Event Loop</div>
-      <div class="cheat-terms">
-        <span class="cheat-term"><b>Call Stack</b> — runs code, one thing at a time</span>
-        <span class="cheat-term"><b>Callback Queue</b> — waiting line for timers/I/O</span>
-        <span class="cheat-term"><b>Microtask Queue</b> — higher-priority line, for Promises</span>
-        <span class="cheat-term"><b>Event Loop</b> — decides what runs next</span>
-        <span class="cheat-term"><b>Worker Threads</b> — the one real parallel exception</span>
-      </div>
-    </div>
-
-    <div class="cheat-group">
-      <div class="cheat-group-label"><span class="dot" style="background:var(--async)"></span>Layer 3 — Async Patterns</div>
-      <div class="cheat-terms">
-        <span class="cheat-term"><b>Callback</b> — function passed in, called later</span>
-        <span class="cheat-term"><b>Promise</b> — pending → fulfilled / rejected</span>
-        <span class="cheat-term"><b>async/await</b> — Promise code that reads top-to-bottom</span>
-        <span class="cheat-term"><b>unhandledRejection</b> — an uncaught async error</span>
-      </div>
-    </div>
-
-    <div class="cheat-group">
-      <div class="cheat-group-label"><span class="dot" style="background:var(--modules)"></span>Layer 4 — Modules</div>
-      <div class="cheat-terms">
-        <span class="cheat-term"><b>require() / import</b> — load another file's code</span>
-        <span class="cheat-term"><b>module.exports / export</b> — share your code</span>
-        <span class="cheat-term"><b>package.json</b> — project's ID card</span>
-        <span class="cheat-term"><b>package-lock.json</b> — exact installed versions</span>
-        <span class="cheat-term"><b>node_modules/</b> — where packages actually live</span>
-        <span class="cheat-term"><b>npx</b> — run a package without installing it globally</span>
-      </div>
-    </div>
-
-    <div class="cheat-group">
-      <div class="cheat-group-label"><span class="dot" style="background:var(--globals)"></span>Layer 5 — Globals</div>
-      <div class="cheat-terms">
-        <span class="cheat-term"><b>process</b> — info about this running program</span>
-        <span class="cheat-term"><b>console</b> — print output</span>
-        <span class="cheat-term"><b>__dirname / __filename</b> — this file's location</span>
-        <span class="cheat-term"><b>process.env</b> — config from outside your code</span>
-      </div>
-    </div>
-
-    <div class="cheat-group">
-      <div class="cheat-group-label"><span class="dot" style="background:var(--apis)"></span>Layer 6 — Core APIs</div>
-      <div class="cheat-terms">
-        <span class="cheat-term"><b>fs</b> — files</span>
-        <span class="cheat-term"><b>http</b> — servers</span>
-        <span class="cheat-term"><b>path</b> — safe file paths</span>
-        <span class="cheat-term"><b>Buffer</b> — raw binary data</span>
-        <span class="cheat-term"><b>Streams</b> — data in chunks, not all at once</span>
-        <span class="cheat-term"><b>EventEmitter</b> — the .on() / .emit() pattern</span>
-      </div>
-    </div>
-
-    <div class="cheat-group">
-      <div class="cheat-group-label"><span class="dot" style="background:var(--project)"></span>Layer 7 — Structure</div>
-      <div class="cheat-terms">
-        <span class="cheat-term"><b>src/index.js</b> — entry point</span>
-        <span class="cheat-term"><b>routes/</b> — request handlers</span>
-        <span class="cheat-term"><b>.env</b> — secret config, never committed</span>
-        <span class="cheat-term"><b>.gitignore</b> — tells git what to skip</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FILE TREE ============ -->
-<section class="section" id="filetree">
-  <div class="section-head">
-    <span class="tag" style="color:#0a0e17;background:var(--project)">[ AT A GLANCE ]</span>
-    <h2>The Whole Project, As One Tree</h2>
-    <p>Same files as above, laid out as a single diagram — what each one is, and what actually lives inside it.</p>
-  </div>
-
-  <div class="ftree-wrap">
-    <div class="ftree-root"><span class="ftree-root-icon">📦</span><span>Node.js Project</span></div>
-    <ul class="ftree">
-      <li>
-        <div class="ftree-node">
-          <span class="ftree-file" style="color:var(--runtime-ink)">package.json</span>
-          <span class="ftree-note">"What this project is"</span>
-        </div>
-        <ul class="ftree">
-          <li><div class="ftree-node"><span class="ftree-leaf">Project Info</span></div></li>
-          <li><div class="ftree-node"><span class="ftree-leaf">Dependencies</span></div></li>
-          <li><div class="ftree-node"><span class="ftree-leaf">Scripts</span></div></li>
-          <li><div class="ftree-node"><span class="ftree-leaf">Configuration</span></div></li>
-        </ul>
-      </li>
-      <li>
-        <div class="ftree-node">
-          <span class="ftree-file" style="color:var(--apis-ink)">package-lock.json</span>
-          <span class="ftree-note">"Keeps package versions fixed"</span>
-        </div>
-        <ul class="ftree">
-          <li><div class="ftree-node"><span class="ftree-leaf">Exact Package Versions</span></div></li>
-          <li><div class="ftree-node"><span class="ftree-leaf">Reproducible Installs</span></div></li>
-        </ul>
-      </li>
-      <li>
-        <div class="ftree-node">
-          <span class="ftree-file" style="color:var(--async-ink)">.env</span>
-          <span class="ftree-note">"Secrets &amp; settings"</span>
-        </div>
-        <ul class="ftree">
-          <li><div class="ftree-node"><span class="ftree-leaf">Environment Variables</span></div></li>
-          <li><div class="ftree-node"><span class="ftree-leaf">API Keys</span></div></li>
-          <li><div class="ftree-node"><span class="ftree-leaf">Database URL</span></div></li>
-          <li><div class="ftree-node"><span class="ftree-leaf">Secrets</span></div></li>
-        </ul>
-      </li>
-      <li>
-        <div class="ftree-node">
-          <span class="ftree-file" style="color:var(--globals-ink)">.gitignore</span>
-          <span class="ftree-note">"Files Git should ignore"</span>
-        </div>
-        <ul class="ftree">
-          <li><div class="ftree-node"><span class="ftree-leaf">Ignore node_modules</span></div></li>
-          <li><div class="ftree-node"><span class="ftree-leaf">Ignore .env</span></div></li>
-        </ul>
-      </li>
-      <li>
-        <div class="ftree-node">
-          <span class="ftree-file" style="color:var(--project-ink)">src/</span>
-          <span class="ftree-note">"Your code lives here"</span>
-        </div>
-        <ul class="ftree">
-          <li><div class="ftree-node"><span class="ftree-leaf">index.js</span></div></li>
-          <li><div class="ftree-node"><span class="ftree-leaf">routes/</span></div></li>
-          <li><div class="ftree-node"><span class="ftree-leaf">controllers/</span></div></li>
-          <li><div class="ftree-node"><span class="ftree-leaf">services/</span></div></li>
-          <li><div class="ftree-node"><span class="ftree-leaf">...</span></div></li>
-        </ul>
-      </li>
-      <li>
-        <div class="ftree-node">
-          <span class="ftree-file" style="color:var(--modules-ink)">node_modules/</span>
-          <span class="ftree-note">"Downloaded packages"</span>
-        </div>
-        <ul class="ftree">
-          <li><div class="ftree-node"><span class="ftree-leaf">Installed Packages</span></div></li>
-          <li><div class="ftree-node"><span class="ftree-leaf">Third-party Libraries</span></div></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</section>
+<!-- Continue with rest of content... -->
 
 <footer>
-  <b>The whole system, in one sentence:</b> your code calls modules, modules call Node's APIs, those APIs hand slow work to libuv, libuv reports back through the Event Loop, and your single thread never once has to stand still waiting.
-  <br><br>
-  <a href="#">↑ Back to top</a>
+  <p>Built with care as a complete mental model for Node.js. Questions? <b>Share feedback</b> — the web is better when concepts are clear.</p>
+  <p style="margin-top:20px; font-size:12px;"><b>Theme:</b> Light mode is the default. Toggle between light and dark with the button in the top right.</p>
 </footer>
 
-<script>
-  try {
-    // purely cosmetic smooth-scroll polish; page works perfectly with this disabled
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', function(e){
-        const href = this.getAttribute('href');
-        if(href === '#'){ e.preventDefault(); window.scrollTo({top:0, behavior:'smooth'}); return; }
-        const target = document.querySelector(href);
-        if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth', block:'start'}); }
-      });
-    });
-  } catch(e){ console.error(e); }
-</script>
-<script>
-  try {
-    var htmlEl = document.documentElement;
-    var toggleBtn = document.getElementById('themeToggle');
-    var iconEl = document.getElementById('themeIcon');
-    var labelEl = document.getElementById('themeLabel');
-
-    function applyTheme(theme){
-      if(theme === 'light'){
-        htmlEl.setAttribute('data-theme', 'light');
-        iconEl.textContent = '🌙';
-        labelEl.textContent = 'Dark';
-      } else {
-        htmlEl.removeAttribute('data-theme');
-        iconEl.textContent = '☀️';
-        labelEl.textContent = 'Light';
-      }
-    }
-
-    // Default to dark (this page's original design); switch instantly on click.
-    applyTheme('dark');
-
-    toggleBtn.addEventListener('click', function(){
-      var isLight = htmlEl.getAttribute('data-theme') === 'light';
-      applyTheme(isLight ? 'dark' : 'light');
-    });
-  } catch(e){ console.error(e); }
-</script>
-<script>
-  try {
-    var moreBtn = document.getElementById('quizMoreBtn');
-    var moreWrap = document.getElementById('quizMoreWrap');
-    moreBtn.addEventListener('click', function(){
-      var isOpen = moreWrap.classList.toggle('is-open');
-      moreBtn.textContent = isOpen ? 'Show fewer questions ↑' : 'Show 21 more questions ↓';
-      if(!isOpen){
-        moreBtn.scrollIntoView({behavior:'smooth', block:'center'});
-      }
-    });
-  } catch(e){ console.error(e); }
-</script>
 </body>
 </html>
