@@ -149,7 +149,7 @@
   .prereqs-card h3{font-size:13.5px; margin:0 0 11px; color:var(--text); display:flex; align-items:center; gap:7px;}
   .prereqs-card ul{margin:0; padding-left:18px; display:flex; flex-direction:column; gap:8px;}
   .prereqs-card li{font-size:12.8px; line-height:1.6; color:var(--text-dim);}
-  .prereqs-card code{font-family:'JetBrains Mono',monospace; background:var(--surface-07); padding:1px 5px; border-radius:4px; font-size:12px; color:var(--inline-code-color);}
+  .prereqs-card code{font-family:'JetBrains Mono',monospace; background:var(--surface-07); padding:1px 5px; border-radius:4px; font-size:12px; color:var(--inline-code-color); white-space:nowrap;}
   .prereqs-note{grid-column:1/-1; font-size:12.3px; color:var(--text-dimmer); border-top:1px dashed var(--card-border); padding-top:13px; margin-top:0; line-height:1.6;}
 
   /* SYSTEM FLOW STRIP */
@@ -214,6 +214,7 @@
   /* EVENT LOOP SVG */
   .loop-wrap{max-width:960px; margin:0 auto; background:var(--surface-02); border:1px solid var(--card-border); border-radius:16px; padding:14px; transition:background-color .25s ease, border-color .25s ease, box-shadow .25s ease; box-shadow:var(--card-shadow);}
   .loop-wrap svg{width:100%; height:auto; display:block;}
+  .loop-scroll-hint{display:none;}
   .loop-box-label{font-size:15px; font-weight:700; fill:var(--text);}
   .loop-box-sub{font-size:11px; fill:var(--text-dimmer); font-weight:600;}
   .loop-arrow-label{font-size:11.5px; fill:var(--loop-label); font-weight:600;}
@@ -246,7 +247,7 @@
   .cc-example{margin-top:4px; background:var(--surface-03); border:1px solid var(--card-border); border-radius:7px; padding:8px 10px; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--example-code-color); line-height:1.5;}
 
   /* CODE WINDOWS */
-  .code-window{margin-top:14px; border-radius:10px; overflow:hidden; background:#0b0f1a; border:1px solid rgba(255,255,255,0.08);}
+  .code-window{margin-top:14px; border-radius:10px; overflow:hidden; background:#0b0f1a; border:1px solid rgba(255,255,255,0.08); min-width:0;}
   .code-header{display:flex; align-items:center; gap:6px; padding:8px 12px; background:rgba(255,255,255,0.035);}
   .dot2{width:9px; height:9px; border-radius:50%;}
   .dot2.r{background:#ff5f56;} .dot2.y{background:#ffbd2e;} .dot2.g{background:#27c93f;}
@@ -254,7 +255,8 @@
   pre.code-body{margin:0; padding:13px 15px; overflow-x:auto; font-family:'JetBrains Mono',monospace; font-size:12.3px; line-height:1.6; color:#c9d1d9;}
   .kw{color:#ff8fab; font-weight:600;} .str{color:#9ecbff;} .com{color:#6b7484; font-style:italic;} .fn{color:#d2a8ff;}
 
-  .code-trio{display:grid; grid-template-columns:1fr; gap:14px; margin-top:20px;}
+  .code-trio{display:grid; grid-template-columns:1fr; gap:14px; margin-top:20px; min-width:0;}
+  .code-trio > div{min-width:0;}
   @media(min-width:860px){ .code-trio{grid-template-columns:1fr 1fr 1fr;} }
   .code-trio-label{font-size:11px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text-dimmer); margin-bottom:6px; display:block; font-family:'JetBrains Mono',monospace;}
 
@@ -291,7 +293,38 @@
 
   @media(max-width:640px){
     .flow-chevron{display:none;}
-    .nav-links{display:none;}
+
+    .topnav-inner{padding:10px 14px; gap:8px;}
+    .brand{font-size:13px;}
+    .nav-links{
+      display:flex; flex-wrap:nowrap; flex-basis:100%; order:3;
+      overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none;
+      gap:3px; margin:0 -14px; padding:0 14px 2px;
+    }
+    .nav-links::-webkit-scrollbar{display:none;}
+    .nav-links a{padding:6px 10px;}
+    .theme-toggle{padding:5px 10px; font-size:10px;}
+
+    .hero{padding:36px 18px 6px;}
+    .hero p{font-size:14px;}
+    .section{padding:46px 18px 16px;}
+    .prereqs, .flow-strip, .flow-note, .connector-note{padding-left:18px; padding-right:18px;}
+    .prereqs-card{padding:18px 18px 16px;}
+
+    .ftree-wrap{padding:18px 14px 16px;}
+    .stack-pair{gap:6px;}
+    .stack-layer{padding:12px 10px;}
+    .stack-layer .t{font-size:13px;}
+
+    /* Event loop diagram: scale text would become unreadable if squeezed to
+       phone width, so keep it at a legible fixed size and let it scroll. */
+    .loop-scroll-hint{display:block; text-align:center; font-size:11px; color:var(--text-dimmer); margin-bottom:8px; font-family:'JetBrains Mono',monospace;}
+    .loop-wrap{overflow-x:auto; -webkit-overflow-scrolling:touch; padding:12px;}
+    .loop-wrap svg{width:680px; min-width:680px;}
+
+    .cc-title{font-size:13px;}
+    .code-trio-label{font-size:10px;}
+    footer{padding:28px 18px 56px;}
   }
 </style>
 </head>
@@ -427,7 +460,7 @@ hi</pre>
       <summary><span class="cc-icon">⌨️</span><span class="cc-title">The REPL</span><span class="cc-tag">Interactive</span><span class="cc-chev">›</span></summary>
       <p class="cc-tagline">A live prompt for testing one line at a time.</p>
       <div class="cc-body">
-        <div class="cc-qa"><b>What:</b> Type <code style="font-family:'JetBrains Mono',monospace;color:var(--example-code-color);">node</code> alone, with no filename, to get an interactive shell.</div>
+        <div class="cc-qa"><b>What:</b> Type <code style="font-family:'JetBrains Mono',monospace;color:var(--example-code-color);white-space:nowrap;">node</code> alone, with no filename, to get an interactive shell.</div>
         <div class="cc-qa"><b>Why:</b> Perfect for testing a tiny snippet without creating a whole file.</div>
         <div class="cc-qa"><b>Does:</b> Runs each line the moment you hit enter, and shows you the result immediately.</div>
         <div class="cc-qa"><b>Connects:</b> Same engine as running a file — just interactive instead of reading from disk.</div>
@@ -441,7 +474,7 @@ hi</pre>
         <div class="cc-qa"><b>What:</b> Prints a value to your terminal — Node's version of "let me see what's happening."</div>
         <div class="cc-qa"><b>Why:</b> There's no browser page to look at — this is how you'll debug almost everything below.</div>
         <div class="cc-qa"><b>Does:</b> Accepts strings, numbers, objects, arrays — anything — and prints a readable version.</div>
-        <div class="cc-qa"><b>Connects:</b> Formally, this lives on the <code style="font-family:'JetBrains Mono',monospace;color:var(--example-code-color);">console</code> global object — see Globals below.</div>
+        <div class="cc-qa"><b>Connects:</b> Formally, this lives on the <code style="font-family:'JetBrains Mono',monospace;color:var(--example-code-color);white-space:nowrap;">console</code> global object — see Globals below.</div>
       </div>
     </details>
 
@@ -450,8 +483,8 @@ hi</pre>
       <p class="cc-tagline">Restarts your server automatically when you save.</p>
       <div class="cc-body">
         <div class="cc-qa"><b>What:</b> A small tool that watches your files and restarts Node the moment one changes.</div>
-        <div class="cc-qa"><b>Why:</b> Without it, you'd manually stop and rerun <code style="font-family:'JetBrains Mono',monospace;color:var(--example-code-color);">node</code> after every single edit.</div>
-        <div class="cc-qa"><b>Does:</b> Swap <code style="font-family:'JetBrains Mono',monospace;color:var(--example-code-color);">node app.js</code> for <code style="font-family:'JetBrains Mono',monospace;color:var(--example-code-color);">npx nodemon app.js</code>.</div>
+        <div class="cc-qa"><b>Why:</b> Without it, you'd manually stop and rerun <code style="font-family:'JetBrains Mono',monospace;color:var(--example-code-color);white-space:nowrap;">node</code> after every single edit.</div>
+        <div class="cc-qa"><b>Does:</b> Swap <code style="font-family:'JetBrains Mono',monospace;color:var(--example-code-color);white-space:nowrap;">node app.js</code> for <code style="font-family:'JetBrains Mono',monospace;color:var(--example-code-color);white-space:nowrap;">npx nodemon app.js</code>.</div>
         <div class="cc-qa"><b>Connects:</b> Installed like any other npm package — see Modules & npm below.</div>
       </div>
     </details>
@@ -473,6 +506,7 @@ hi</pre>
     <p>The chef (<b>Call Stack</b>) can only do one thing at a time. When an order needs something slow — marinating, waiting on a delivery — the chef hands it to the kitchen staff (<b>libuv</b>) and immediately moves to the next ticket. The staff finishes in the background and drops the result on the pass (the queues). The expediter (<b>Event Loop</b>) has one rule: clear <i>every</i> VIP ticket on the pass (Microtask Queue) before calling out a single regular ticket (Callback Queue).</p>
   </div>
 
+  <span class="loop-scroll-hint">↔ scroll to see the full diagram</span>
   <div class="loop-wrap">
     <svg viewBox="0 0 950 560" xmlns="http://www.w3.org/2000/svg">
       <defs>
