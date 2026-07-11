@@ -8,6 +8,9 @@ a list of isolated topics. A page that maps how V8, libuv, the Event Loop, modul
 
 ---
 
+<img width="2752" height="1491" alt="Inside_Server-Side_Runtime_Architecture" src="https://github.com/user-attachments/assets/81541ad1-3705-4226-a6d5-e6358c89734c" />
+
+
 ## What's inside
 
 - **The Big Picture** — what Node.js is, why it exists, and how V8 + libuv
